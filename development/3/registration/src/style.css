@@ -1,0 +1,39 @@
+/* Styles for the event poster */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  /* Styles for the registration form */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  button[type="submit"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  

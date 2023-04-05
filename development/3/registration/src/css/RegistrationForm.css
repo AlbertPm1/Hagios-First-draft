@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(216, 219, 223);
+}
+.container-RegistrationForm {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
