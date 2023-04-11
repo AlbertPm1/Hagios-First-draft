@@ -43,7 +43,7 @@ function RegistrationForm() {
 
       <label htmlFor="phoneNumber">Phone Number:</label>
       <input
-        type="tel"
+        type="text"
         id="phoneNumber"
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}

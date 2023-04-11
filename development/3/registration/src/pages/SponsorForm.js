@@ -1,36 +1,75 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 function SponsorForm() {
-  return (
-    <form>
-      <h2>Sponsor Registration</h2>
-      <div className="form-group">
+    const [title, setTitle] = useState('')
+    const [ministryName, setMinistryName] = useState('')
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+  
+    function handleSubmit(event) {
+      event.preventDefault();
+      // Do something with the form data, like submit it to a server
+      console.log({ firstName, lastName, email, phoneNumber });
+    }
+  
+    return (
+      <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title:</label>
-        <input type="text" id="title" name="title" required />
-      </div>
-      <div className="form-group">
+        <input
+          type="text"
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
         <label htmlFor="ministryName">Ministry Name:</label>
-        <input type="text" id="ministryName" name="ministryName" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">First Name:</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="phone">Second name:</label>
-        <input type="tel" id="phone" name="phone" required />
-      </div>
-      <div className="form-group">
+        <input
+          type="text"
+          id="ministryName"
+          value={ministryName}
+          onChange={(e) => setMinistryName(e.target.value)}
+          required
+        />
+        <label htmlFor="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
+        />
+  
+        <label htmlFor="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          required
+        />
+  
         <label htmlFor="email">Email:</label>
-        <textarea id="email" name="required"></textarea>
-        <div className="form-group">
-        <label htmlFor="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required />
-      </div>
-      </div>
-      <button type="submit">Register</button>
-    </form>
-  );
-}
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+  
+        <label htmlFor="phoneNumber">Phone Number:</label>
+        <input
+          type="text"
+          id="phoneNumber"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          required
+        />
+  
+        <button type="submit">Register</button>
+      </form>
+    );
+  }
 
 export default SponsorForm;

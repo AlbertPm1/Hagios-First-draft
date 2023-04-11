@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(216, 219, 223);
+    background: linear-gradient(#141e30, #243b55);
 }
 .container-RegistrationForm {
 	display: flex;
