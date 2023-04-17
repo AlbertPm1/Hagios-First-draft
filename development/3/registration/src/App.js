@@ -1,21 +1,26 @@
 import React from 'react';
-import SidePhoto from './pages/SidePhoto';
 import RegistrationPage from './pages/RegistrationPage';
+import SidePhoto from './pages/SidePhoto';
+import myPhoto from './images/myPhoto.jpg'; // import the image file
 import "./App.css";
+
+
+
 function App() {
   return (
-    // <div>
-    //   <h1>Register as a</h1>
-      
+    
       <div className="container">
+        <RegistrationPage />
         <SidePhoto />
         
-        <RegistrationPage />
+        <div>
+      <h1>
+        <img src={myPhoto} alt="My Photo" /> {/* add the image to h1 */}
       
+      </h1>
+      
+      </div>
     </div>
-    // </div>
-    
-    
   );
 }
 

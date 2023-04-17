@@ -1,4 +1,5 @@
 .RegistrationPage {
+  margin-top: 400px;
   background-color: #faf9f9;
   float: left;
   display: flex;
@@ -17,30 +18,40 @@
 }
 
 
-.event-details h1 {
-  font-size: 30px;
+/* .event-details h1 {
+  background-color: #f7f4f4;
+  font-size: 2px;
   font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: -100px;
-}
+  margin-top: 10px;
+  margin-bottom: -100px; */
 
+h1 img {
+  position: absolute;
+  top: 10px; /* adjust this value to position the photo vertically */
+  left: 5px; /* adjust this value to position the photo horizontally */
+  width: 450px; /* adjust this value to change the width of the photo */
+  height: 420px; /* adjust this value to change the height of the photo */
+  border-radius: 10px; /* add a border radius to round the edges of the photo */
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
+  z-index: 1; /* set the z-index to 1 to ensure the photo appears above the content */
+}
 .registration-form {
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .registration-form button {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  padding: 10px 20px;
-  margin-right: 10px;
+  padding: 10px 60px;
+  margin-right: 100px;
   background-color: #3134c5;
   color: #fdfafd;
-  border: none;
-  border-radius: 15px;
+  border: 0ch;
+  border-radius: 10px;
   cursor: pointer;
   
 }
@@ -65,7 +76,7 @@
 .registration-form form input[type="text"],
 .registration-form form input[type="email"] {
   
-  font-size: 19px;
+  font-size: 25px;
   padding: 5px;
   margin-bottom: 18px;
   border-radius: 40px;
@@ -74,8 +85,7 @@
 .card-image {
 	border-radius: 8px;
 	overflow: hidden;
-	padding-bottom: 65%;
-	background-image: url('https://images.unsplash.com/photo-1681121882740-561016c015dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60');
+	padding-bottom: 13%;
 	background-repeat: no-repeat;
 	background-size: 150%;
 	background-position: 0 5%;
@@ -98,11 +108,30 @@
 .side-photo {
   position: absolute;
   top: 20px; /* adjust this value to position the photo vertically */
-  left: 300px; /* adjust this value to position the photo horizontally */
+  left: 350px; /* adjust this value to position the photo horizontally */
   width: 600px; /* adjust this value to change the width of the photo */
   height: 700px; /* adjust this value to change the height of the photo */
   border-radius: 10px; /* add a border radius to round the edges of the photo */
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
   z-index: 1; /* set the z-index to 1 to ensure the photo appears above the content */
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footer a {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #000;
 }
 
