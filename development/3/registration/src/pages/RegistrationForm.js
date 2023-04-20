@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../css/RegistrationForm.css";
+
 function RegistrationForm() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -8,8 +9,28 @@ function RegistrationForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // Do something with the form data, like submit it to a server
-    console.log({ firstName, lastName, email, phoneNumber });
+
+    const formData = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phoneNumber: phoneNumber
+    };
+
+    fetch('/api/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 
   return (
