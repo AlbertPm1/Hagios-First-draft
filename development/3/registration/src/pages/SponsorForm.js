@@ -34,7 +34,7 @@ function SponsorForm() {
         return response.json();
       })
       .then(data => {
-        console.log('Success:', data);
+        console.log(' Registration Successful:', data);
       })
       .catch(error => {
         console.error('Error:', error);

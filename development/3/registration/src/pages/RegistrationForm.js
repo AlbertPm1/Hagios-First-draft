@@ -26,7 +26,7 @@ function RegistrationForm() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
+      console.log('Regisration Successful:', data);
     })
     .catch((error) => {
       console.error('Error:', error);
