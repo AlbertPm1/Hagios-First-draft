@@ -33,17 +33,19 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0062cc;
 }
+@media (min-width: 300px) {
 .RegistrationPage {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   margin-top: 350px;
-  margin-right: 800px;
+  margin-right: 150px;
   min-height: 50vh;
+  width: 100%;
   background-color: #030616;
 }
-
+}
 .event-details {
   background-color: #fcf9f9;
   border-radius: 2px;
@@ -52,21 +54,26 @@ button[type="submit"]:hover {
   max-width: 500px;
   width: 100%;
 }
+@media (min-width: 350px) {
 h1 img {
   position: absolute;
   top: 10px; /* adjust this value to position the photo vertically */
   left: 5px; /* adjust this value to position the photo horizontally */
   width: 600px; /* adjust this value to change the width of the photo */
+  /* width: 50%; */
   height: 350px; /* adjust this value to change the height of the photo */
   border-radius: 1px; /* add a border radius to round the edges of the photo */
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
   z-index: 1; /* set the z-index to 1 to ensure the photo appears above the content */
 }
+}
+@media (min-width: 500px) {
 h2 img {
   position: absolute;
   top: 700px; /* adjust this value to position the photo vertically */
   left: 600px; /* adjust this value to position the photo horizontally */
-  width:600px; /* adjust this value to change the width of the photo */
+  width:500px; /* adjust this value to change the width of the photo */
+  /* width: 50%; */
   height: 350px; /* adjust this value to change the height of the photo */
   border-radius: 1px; /* add a border radius to round the edges of the photo */
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
@@ -80,7 +87,7 @@ h2 img {
   border-radius: 8px;
   height: 59px;
 }
-
+}
 .card-image h1 {
   color: #130303;
   font-size: 2.5rem;
@@ -132,15 +139,18 @@ h2 img {
 .footer a:hover {
   color: #111499;
 }
+@media (min-width: 300px) {
 .side-photo {
   position: absolute;
-  top: 20px; /* adjust this value to position the photo vertically */
+  top: 40px; /* adjust this value to position the photo vertically */
   left: 600px; /* adjust this value to position the photo horizontally */
-  width: 600px; /* adjust this value to change the width of the photo */
+  width: 500px; /* adjust this value to change the width of the photo */
+  /* width: 50%; */
   height: 700px; /* adjust this value to change the height of the photo */
   border-radius: 10px; /* add a border radius to round the edges of the photo */
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
   z-index: 1; /* set the z-index to 1 to ensure the photo appears above the content */
+}
 }
 .MinisterForm {
   display: flex;
