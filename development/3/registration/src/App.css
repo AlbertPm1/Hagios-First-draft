@@ -64,7 +64,7 @@ h1 img {
 }
 h2 img {
   position: absolute;
-  top: 800px; /* adjust this value to position the photo vertically */
+  top: 700px; /* adjust this value to position the photo vertically */
   left: 600px; /* adjust this value to position the photo horizontally */
   width:600px; /* adjust this value to change the width of the photo */
   height: 350px; /* adjust this value to change the height of the photo */
@@ -78,7 +78,7 @@ h2 img {
   justify-content: center;
   background-color: #e6e3db;
   border-radius: 8px;
-  height: 200px;
+  height: 59px;
 }
 
 .card-image h1 {
