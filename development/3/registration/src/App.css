@@ -92,6 +92,13 @@ h2 img {
   flex-direction: column;
   margin-top: 32px;
 }
+.Sponsor-form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3px;
+  margin-left: 0px;
+}
+
 
 .registration-form button {
   background-color:  #ffa000;
@@ -106,7 +113,7 @@ h2 img {
 }
 
 .registration-form button:hover {
-  background-color: #0720ff;
+  background-color: #02030f;
 }
 
 .footer {

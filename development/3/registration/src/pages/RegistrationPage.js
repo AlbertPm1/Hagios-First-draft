@@ -17,6 +17,7 @@ function RegistrationPage() {
           <div className="column">
             <button className={showRegistrationForm ? 'active' : ''} onClick={() => setShowRegistrationForm(true)}>Attendee</button>
           </div>
+          <div className="Sponsor-form"></div>
           <div className="column">
             <button className={!showRegistrationForm ? 'active' : ''} onClick={() => setShowRegistrationForm(false)}>Minister</button>
           </div>
