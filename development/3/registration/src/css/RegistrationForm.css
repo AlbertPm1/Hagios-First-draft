@@ -1,10 +1,13 @@
+/* @media (min-width: 7000px) { */
 body{
-    background: linear-gradient(#01060f, #030303);
+    background: linear-gradient(#0f0f0f, #050505);
+	
 }
-.container-RegistrationForm {
+
+/* .container-RegistrationForm {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	max-width: 80%;
-}
+	max-width: 40%;
+} */
