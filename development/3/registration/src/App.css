@@ -55,10 +55,10 @@ button[type="submit"]:hover {
 h1 img {
   position: absolute;
   top: 10px; /* adjust this value to position the photo vertically */
-  left: 5px; /* adjust this value to position the photo horizontally */
+  left: 0px; /* adjust this value to position the photo horizontally */
   width: 600px; /* adjust this value to change the width of the photo */
   height: 350px; /* adjust this value to change the height of the photo */
-  border-radius: 10px; /* add a border radius to round the edges of the photo */
+  border-radius: 1px; /* add a border radius to round the edges of the photo */
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
   z-index: 1; /* set the z-index to 1 to ensure the photo appears above the content */
 }
@@ -68,7 +68,7 @@ h2 img {
   left: 600px; /* adjust this value to position the photo horizontally */
   width:600px; /* adjust this value to change the width of the photo */
   height: 350px; /* adjust this value to change the height of the photo */
-  border-radius: 10px; /* add a border radius to round the edges of the photo */
+  border-radius: 1px; /* add a border radius to round the edges of the photo */
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
   z-index: 1; /* set the z-index to 1 to ensure the photo appears above the content */
 }
@@ -138,7 +138,7 @@ h2 img {
   left: 600px; /* adjust this value to position the photo horizontally */
   width: 600px; /* adjust this value to change the width of the photo */
   height: 700px; /* adjust this value to change the height of the photo */
-  border-radius: 10px; /* add a border radius to round the edges of the photo */
+  border-radius: 1px; /* add a border radius to round the edges of the photo */
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* add a box shadow for a 3D effect */
   z-index: 1; /* set the z-index to 1 to ensure the photo appears above the content */
 }
