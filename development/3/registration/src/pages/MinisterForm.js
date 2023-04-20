@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function SponsorForm() {
+function MinisterForm() {
   const [title, setTitle] = useState('')
   const [ministryName, setMinistryName] = useState('')
   const [firstName, setFirstName] = useState('');
@@ -20,7 +20,7 @@ function SponsorForm() {
       phoneNumber,
     };
 
-    fetch('/api/sponsor', {
+    fetch('/api/minister', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -100,4 +100,4 @@ function SponsorForm() {
   );
 }
 
-export default SponsorForm;
+export default MinisterForm;

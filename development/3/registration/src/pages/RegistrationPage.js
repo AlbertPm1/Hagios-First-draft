@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RegistrationForm from './RegistrationForm';
-import SponsorForm from './SponsorForm';
+import MinisterForm from './MinisterForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faYoutube, faTelegram, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
@@ -17,12 +17,12 @@ function RegistrationPage() {
           <div className="column">
             <button className={showRegistrationForm ? 'active' : ''} onClick={() => setShowRegistrationForm(true)}>Attendee</button>
           </div>
-          <div className="Sponsor-form"></div>
+          <div className="Minister-form"></div>
           <div className="column">
             <button className={!showRegistrationForm ? 'active' : ''} onClick={() => setShowRegistrationForm(false)}>Minister</button>
           </div>
           <div className="form-container">
-            {showRegistrationForm ? <RegistrationForm /> : <SponsorForm />}
+            {showRegistrationForm ? <RegistrationForm /> : <MinisterForm />}
           </div>
         </div>
         <footer className="footer">
