@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 function MinisterForm() {
   const [title, setTitle] = useState('')
-  const [ministryName, setMinistryName] = useState('')
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [name, setMinistryName] = useState('')
+  const [firstname, setFirstName] = useState('');
+  const [secondname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
@@ -12,15 +12,20 @@ function MinisterForm() {
     event.preventDefault();
 
     const data = {
-      title,
-      ministryName,
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-    };
+      userdetails: {
+        firstname: firstname,
+        secondname: secondname,
+        email: email,
+        phone_number: phoneNumber
+      },
+      other:{
+        
+        title: title,
+        name: name
+      }
+    }
 
-    fetch('/api/minister', {
+    fetch('http://api.hagiosministriesintl.org/ministry/minister', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -51,28 +56,28 @@ function MinisterForm() {
         onChange={(e) => setTitle(e.target.value)}
         required
       />
-      <label htmlFor="ministryName">Ministry Name:</label>
+      <label htmlFor="name">Ministry Name:</label>
       <input
         type="text"
-        id="ministryName"
-        value={ministryName}
+        id="name"
+        value={name}
         onChange={(e) => setMinistryName(e.target.value)}
         required
       />
-      <label htmlFor="firstName">First Name:</label>
+      <label htmlFor="firstname">First Name:</label>
       <input
         type="text"
-        id="firstName"
-        value={firstName}
+        id="firstname"
+        value={firstname}
         onChange={(e) => setFirstName(e.target.value)}
         required
       />
 
-      <label htmlFor="lastName">Last Name:</label>
+      <label htmlFor="secondname">Last Name:</label>
       <input
         type="text"
-        id="lastName"
-        value={lastName}
+        id="secondname"
+        value={secondname}
         onChange={(e) => setLastName(e.target.value)}
         required
       />

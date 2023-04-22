@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import "../css/RegistrationForm.css";
 
 function RegistrationForm() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [firstname, setFirstName] = useState('');
+  const [secondname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
@@ -11,13 +11,18 @@ function RegistrationForm() {
     event.preventDefault();
 
     const formData = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      phoneNumber: phoneNumber
+      userdetails: {
+        firstname: firstname,
+        secondname: secondname,
+        email: email,
+        phone_number: phoneNumber
+      },
+      other:{
+        
+      }
     };
 
-    fetch('/api/register', {
+    fetch('http://api.hagiosministriesintl.org/ministry/attendee', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -35,20 +40,20 @@ function RegistrationForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="firstName">First Name:</label>
+      <label htmlFor="firstname">First Name:</label>
       <input
         type="text"
-        id="firstName"
-        value={firstName}
+        id="firstname"
+        value={firstname}
         onChange={(e) => setFirstName(e.target.value)}
         required
       />
 
-      <label htmlFor="lastName">Last Name:</label>
+      <label htmlFor="secondname">Last Name:</label>
       <input
         type="text"
-        id="lastName"
-        value={lastName}
+        id="secondname"
+        value={secondname}
         onChange={(e) => setLastName(e.target.value)}
         required
       />
