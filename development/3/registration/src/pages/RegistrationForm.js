@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import "../css/RegistrationForm.css";
-
 function RegistrationForm() {
   const [firstname, setFirstName] = useState('');
   const [secondname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-
   function handleSubmit(event) {
     event.preventDefault();
-
     const formData = {
       userdetails: {
         firstname: firstname,
@@ -17,11 +14,10 @@ function RegistrationForm() {
         email: email,
         phone_number: phoneNumber
       },
-      other:{
-        
+      other: {
+        // Other form data, if any
       }
     };
-
     fetch('http://api.hagiosministriesintl.org/ministry/attendee', {
       method: 'POST',
       headers: {
@@ -29,15 +25,22 @@ function RegistrationForm() {
       },
       body: JSON.stringify(formData)
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        resetForm();
+        alert("Congratulations! Your registration was successful as an Attendee. Kindly check your email for further information") // Call resetForm after successful registration
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   }
-
+  function resetForm() {
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setPhoneNumber('');
+  }
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="firstname">First Name:</label>
@@ -48,7 +51,6 @@ function RegistrationForm() {
         onChange={(e) => setFirstName(e.target.value)}
         required
       />
-
       <label htmlFor="secondname">Last Name:</label>
       <input
         type="text"
@@ -57,7 +59,6 @@ function RegistrationForm() {
         onChange={(e) => setLastName(e.target.value)}
         required
       />
-
       <label htmlFor="email">Email:</label>
       <input
         type="email"
@@ -66,7 +67,6 @@ function RegistrationForm() {
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-
       <label htmlFor="phoneNumber">Phone Number:</label>
       <input
         type="text"
@@ -75,10 +75,8 @@ function RegistrationForm() {
         onChange={(e) => setPhoneNumber(e.target.value)}
         required
       />
-
       <button type="submit">Register</button>
     </form>
   );
 }
-
 export default RegistrationForm;
