@@ -28,7 +28,7 @@ function RegistrationPage() {
         <footer className="footer">
           <a href="https://web.facebook.com/hagiosministriesintl/"><FontAwesomeIcon icon={faFacebook} /></a>
           <a href="https://www.youtube.com/@hagiosministriesinternational/"><FontAwesomeIcon icon={faYoutube} /></a>
-          <a href="https://t.me/"><FontAwesomeIcon icon={faTelegram} /></a>
+          <a href="https://t.me/HagiosMinistriesIntl"><FontAwesomeIcon icon={faTelegram} /></a>
           <a href="https://www.instagram.com/hagios_ministries_intl/"><FontAwesomeIcon icon={faInstagram} /></a>
         </footer>
       </div>
