@@ -1,6 +1,7 @@
 /* @media (min-width: 7000px) { */
 body {
-    background: linear-gradient(#0f0f0f, #050505);
+    background: linear-gradient(#faf8f8, #e7e2e2);
+    width: 100%;
 	
 }
 @media screen and (max-width: 768px) {
