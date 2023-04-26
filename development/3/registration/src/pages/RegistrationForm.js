@@ -18,7 +18,7 @@ function RegistrationForm() {
         // Other form data, if any
       }
     };
-    fetch('http://api.hagiosministriesintl.org/ministry/attendee', {
+    fetch('https://api.hagiosministriesintl.org/ministry/attendee', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

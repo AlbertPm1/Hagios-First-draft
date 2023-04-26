@@ -26,7 +26,7 @@ function MinisterForm() {
       }
     }
 
-    fetch('http://api.hagiosministriesintl.org/ministry/minister', {
+    fetch('https://api.hagiosministriesintl.org/ministry/minister', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
