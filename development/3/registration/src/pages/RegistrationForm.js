@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
+import 'toastr/build/toastr.min.css';
+import toastr from 'toastr';
+
 import "../css/RegistrationForm.css";
+
+toastr.options = {
+  positionClass: 'toast-top-right', // Example position, you can change it
+  timeOut: 3000, // Example timeout, you can change it
+};
 function RegistrationForm() {
   const [firstname, setFirstName] = useState('');
   const [secondname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [isRegistered, setIsRegistered] = useState(false); // New state variable
   function handleSubmit(event) {
     event.preventDefault();
+    if (isRegistered) {
+      toastr.warning('You have already registered.', 'Warning');
+      return;
+    }
     const formData = {
       userdetails: {
         firstname: firstname,
@@ -29,10 +42,13 @@ function RegistrationForm() {
       .then(data => {
         console.log('Success:', data);
         resetForm();
-        alert("Congratulations! Your registration was successful as an Attendee. Kindly check your email for further information") // Call resetForm after successful registration
+        setIsRegistered(true);
+        toastr.success('Congratulations! Your registration was successful as an Attendee. Kindly check your email for further information', 'Success');
+        // alert("Congratulations! Your registration was successful as an Attendee. Kindly check your email for further information") // Call resetForm after successful registration
       })
       .catch((error) => {
         console.error('Error:', error);
+        toastr.error('An error occurred during registration. Please try again.', 'Error');
       });
   }
   function resetForm() {
@@ -75,7 +91,9 @@ function RegistrationForm() {
         onChange={(e) => setPhoneNumber(e.target.value)}
         required
       />
-      <button type="submit">Register</button>
+      <button type="submit" disabled={isRegistered}>
+        {isRegistered ? "Registered" : "Register"}
+      </button>
     </form>
   );
 }

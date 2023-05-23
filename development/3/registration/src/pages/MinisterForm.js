@@ -1,4 +1,14 @@
 import React, { useState } from 'react';
+import 'toastr/build/toastr.min.css';
+import toastr from 'toastr';
+
+
+
+
+toastr.options = {
+  positionClass: 'toast-top-right', // Example position, you can change it
+  timeOut: 3000, // Example timeout, you can change it
+};
 
 function MinisterForm() {
   const [title, setTitle] = useState('')
@@ -19,8 +29,8 @@ function MinisterForm() {
         email: email,
         phone_number: phoneNumber
       },
-      other:{
-        
+      other: {
+
         title: title,
         name: name
       }
@@ -42,16 +52,19 @@ function MinisterForm() {
       .then(data => {
         console.log(' Registration Successful:', data);
         setIsRegistered(true);
+        toastr.success('Congratulations! Your registration was successful as an Minister. Kindly check your email for further information', 'Success');
       })
       .catch(error => {
         console.error('Error:', error);
+        toastr.error('An error occurred during registration. Please try again.', 'Error');
+
       });
   }
 
   return (
     <div>
       {isRegistered ? (
-        <p>Thanks for registration!</p>
+        <p>Thanks for registration! Check out your Email for confirmation</p>
       ) : (
         <form onSubmit={handleSubmit}>
           <label htmlFor="title">Title:</label>
@@ -106,7 +119,9 @@ function MinisterForm() {
             required
           />
 
-          <button type="submit">Register</button>
+          <button type="submit" disabled={isRegistered}>
+            {isRegistered ? "Registered" : "Register"}
+          </button>
         </form>
       )}
     </div>
